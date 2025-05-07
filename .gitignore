@@ -1,0 +1,11 @@
+
+# Ignore the Rust target directory
+/target/
+
+# Ignore the Cargo.lock file for libraries
+/Cargo.lock
+
+# Ignore the .env file for environment variables
+.env
+
+# Ignore other files or directories as needed

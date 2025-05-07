@@ -1,0 +1,34 @@
+[package]
+name = "tutor-db"
+version = "0.1.0"
+edition = "2021"
+default-run = "iter5"
+
+[[bin]]
+name = "iter5"
+path = "src/bin/iter5.rs"
+
+[dependencies]
+# Actix web framework & run-time
+actix-web = "4.9.0"
+actix-rt = "2.10.0"
+
+# Environment variable access libraries 
+dotenv = "0.15.0"
+
+# Postgres access library
+sqlx = { version = "0.8.2", default-features = false, features = [
+  "runtime-tokio-native-tls",
+  "postgres",
+  "macros",
+  "chrono",
+] }
+
+# Data Serialization & Deserialization Library
+serde = { version = "1.0.210", features = ["derive"] }
+
+# Other utils
+chrono = { version = "0.4.38", features = ["serde"] }
+
+# Openssl for build (if openssl is not already installed on the dev server)
+openssl = { version = "0.10.68", features = ["vendored"] }

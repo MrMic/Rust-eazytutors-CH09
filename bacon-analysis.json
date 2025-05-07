@@ -1,0 +1,62 @@
+{
+  "analyzer": "standard",
+  "result": "report",
+  "lines": [
+    {
+      "line": {
+        "content": {
+          "strings": [
+            {
+              "csi": "\u001b[1m\u001b[32m",
+              "raw": "    Finished"
+            },
+            {
+              "csi": "",
+              "raw": " `dev` profile [unoptimized + debuginfo] target(s) in 0.23s"
+            }
+          ]
+        },
+        "origin": "StdErr"
+      },
+      "analysis": {
+        "line_type": "Normal"
+      }
+    },
+    {
+      "line": {
+        "content": {
+          "strings": [
+            {
+              "csi": "\u001b[1m\u001b[32m",
+              "raw": "     Running"
+            },
+            {
+              "csi": "",
+              "raw": " `target/debug/iter1`"
+            }
+          ]
+        },
+        "origin": "StdErr"
+      },
+      "analysis": {
+        "line_type": "Normal"
+      }
+    },
+    {
+      "line": {
+        "content": {
+          "strings": [
+            {
+              "csi": "",
+              "raw": "Courses = [Course { course_id: 1, tutor_id: 1, course_name: \"First course\", posted_time: Some(2020-12-17T05:40:00) }]"
+            }
+          ]
+        },
+        "origin": "StdOut"
+      },
+      "analysis": {
+        "line_type": "Normal"
+      }
+    }
+  ]
+}
