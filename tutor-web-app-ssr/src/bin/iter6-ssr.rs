@@ -7,7 +7,10 @@ use actix_web::{
     web::{self, Data},
 };
 use dotenv::dotenv;
-use iter6::{routes::app_config, state::AppState};
+use iter6::{
+    routes::{app_config, course_config},
+    state::AppState,
+};
 use sqlx::postgres::PgPool;
 use tera::Tera;
 
@@ -32,6 +35,7 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .app_data(Data::new(tera))
             .app_data(shared_data.clone())
+            .configure(course_config)
             .configure(app_config)
     })
     .bind(&host_port)?

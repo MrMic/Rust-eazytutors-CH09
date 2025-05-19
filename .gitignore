@@ -9,3 +9,5 @@
 .env
 
 # Ignore other files or directories as needed
+.profraw
+
