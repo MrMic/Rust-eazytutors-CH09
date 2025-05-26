@@ -46,3 +46,7 @@ coverage/
 
 # Backup files
 *~
+
+# Profile files
+*.profraw
+
