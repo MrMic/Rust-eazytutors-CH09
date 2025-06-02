@@ -8,10 +8,11 @@ use crate::iter6::{
     state::AppState,
 };
 
+// ______________________________________________________________________
 pub async fn handle_insert_course(
     _tmpl: web::Data<tera::Tera>,
     _app_state: web::Data<AppState>,
-    path: web::Data<i32>,
+    path: web::Path<i32>,
     params: web::Json<NewCourse>,
 ) -> Result<HttpResponse, Error> {
     let tutor_id = path.into_inner();
@@ -39,6 +40,7 @@ pub async fn handle_insert_course(
     Ok(HttpResponse::Ok().json(course_response))
 }
 
+// ______________________________________________________________________
 pub async fn handle_update_course(
     _tmpl: web::Data<tera::Tera>,
     _app_state: web::Data<AppState>,
@@ -46,6 +48,7 @@ pub async fn handle_update_course(
     Ok(HttpResponse::Ok().body("Got update request"))
 }
 
+// ______________________________________________________________________
 // Handler function to delete a course for a tutor_id
 pub async fn handle_delete_course(
     _tmpl: web::Data<tera::Tera>,
